@@ -1,0 +1,12 @@
+D:\VisualStudio\repos\PackNmove\bin\Debug\PackNmove.exe.config
+D:\VisualStudio\repos\PackNmove\bin\Debug\PackNmove.exe
+D:\VisualStudio\repos\PackNmove\bin\Debug\PackNmove.pdb
+D:\VisualStudio\repos\PackNmove\bin\Debug\PackNmove.xml
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmoveProject.vbprojAssemblyReference.cache
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.Ocean.resources
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.Resources.resources
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmoveProject.vbproj.GenerateResource.cache
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmoveProject.vbproj.CoreCompileInputs.cache
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.exe
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.xml
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.pdb

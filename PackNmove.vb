@@ -62,11 +62,17 @@ Public Class Ocean
         MyConnection = New System.Data.OleDb.OleDbConnection _
     ("provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & destinationFile & "; Extended Properties=Excel 12.0;")
         MyCommand = New System.Data.OleDb.OleDbDataAdapter _
-        ("select [RoomN],[TenantName],[CivilID],[MoveinDate],[DueDate],[Authorization],[Status] from [Sheet1$] where [RoomN] like '%" & searchtxt & "%'", MyConnection)
+        ("select [RoomN],[TenantName],[CivilID],[MoveinDate],[DueDate],[Authorization],[Status] from [Sheet1$] where [RoomN] like '%" & searchtxt & "%' Or  [CivilID] like '%" & searchtxt & "%' Or  [TenantName] like '%" & searchtxt & "%'", MyConnection)
         MyCommand.TableMappings.Add("Table", "TestTable")
-        DtSet = New System.Data.DataSet
-        MyCommand.Fill(DtSet)
-        DataGridView1.DataSource = DtSet.Tables(0)
+        Try
+            DtSet = New System.Data.DataSet
+            MyCommand.Fill(DtSet)
+            DataGridView1.DataSource = DtSet.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(" حدث عطل اثناء استيراد البيانات من الملف الاصلي" & vbNewLine & ex.Message)
+
+        End Try
+
         MyConnection.Close()
 
     End Sub
@@ -100,12 +106,6 @@ Public Class Ocean
         Call btnfindcase_Click(sender, e)
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
 End Class
 
