@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SQLDataBasesBackup.Ocean
+            Me.MainForm = Global.PackNmove.Ocean
         End Sub
     End Class
 End Namespace

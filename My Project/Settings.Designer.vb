@@ -53,6 +53,18 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property rempath() As String
+            Get
+                Return CType(Me("rempath"),String)
+            End Get
+            Set
+                Me("rempath") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -64,9 +76,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.SQLDataBasesBackup.My.MySettings
+        Friend ReadOnly Property Settings() As Global.PackNmove.My.MySettings
             Get
-                Return Global.SQLDataBasesBackup.My.MySettings.Default
+                Return Global.PackNmove.My.MySettings.Default
             End Get
         End Property
     End Module
