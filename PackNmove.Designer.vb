@@ -81,18 +81,18 @@ Partial Class Ocean
         Me.btnPickFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnPickFile.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPickFile.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnPickFile.Location = New System.Drawing.Point(397, 12)
+        Me.btnPickFile.Location = New System.Drawing.Point(301, 12)
         Me.btnPickFile.Name = "btnPickFile"
         Me.btnPickFile.Size = New System.Drawing.Size(131, 33)
         Me.btnPickFile.TabIndex = 12
-        Me.btnPickFile.Text = "Pick File"
+        Me.btnPickFile.Text = "Pick File / اختر ملف"
         Me.btnPickFile.UseVisualStyleBackColor = False
         '
         'tfilepath
         '
         Me.tfilepath.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tfilepath.ForeColor = System.Drawing.Color.Navy
-        Me.tfilepath.Location = New System.Drawing.Point(223, 51)
+        Me.tfilepath.Location = New System.Drawing.Point(171, 51)
         Me.tfilepath.Multiline = True
         Me.tfilepath.Name = "tfilepath"
         Me.tfilepath.ReadOnly = True
@@ -114,7 +114,7 @@ Partial Class Ocean
         '
         Me.findtxt.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.findtxt.ForeColor = System.Drawing.Color.Navy
-        Me.findtxt.Location = New System.Drawing.Point(387, 128)
+        Me.findtxt.Location = New System.Drawing.Point(397, 128)
         Me.findtxt.Name = "findtxt"
         Me.findtxt.Size = New System.Drawing.Size(103, 26)
         Me.findtxt.TabIndex = 30
@@ -131,11 +131,11 @@ Partial Class Ocean
         Me.btnfindcase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnfindcase.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnfindcase.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnfindcase.Location = New System.Drawing.Point(496, 125)
+        Me.btnfindcase.Location = New System.Drawing.Point(223, 121)
         Me.btnfindcase.Name = "btnfindcase"
-        Me.btnfindcase.Size = New System.Drawing.Size(115, 33)
+        Me.btnfindcase.Size = New System.Drawing.Size(158, 33)
         Me.btnfindcase.TabIndex = 29
-        Me.btnfindcase.Text = "Find Case"
+        Me.btnfindcase.Text = "Find Case / ابحث هنا"
         Me.btnfindcase.UseVisualStyleBackColor = False
         '
         'DataGridView1
@@ -247,11 +247,11 @@ Partial Class Ocean
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(631, 55)
+        Me.CheckBox1.Location = New System.Drawing.Point(579, 51)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(212, 20)
+        Me.CheckBox1.Size = New System.Drawing.Size(265, 36)
         Me.CheckBox1.TabIndex = 32
-        Me.CheckBox1.Text = "Remember this file next time"
+        Me.CheckBox1.Text = "Remember this file next time." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "افتح نفس هذا الملف في المرة القادمة."
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Ocean

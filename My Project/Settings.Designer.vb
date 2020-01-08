@@ -65,6 +65,102 @@ Namespace My
                 Me("rempath") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb1() As String
+            Get
+                Return CType(Me("dtb1"),String)
+            End Get
+            Set
+                Me("dtb1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb2() As String
+            Get
+                Return CType(Me("dtb2"),String)
+            End Get
+            Set
+                Me("dtb2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb3() As String
+            Get
+                Return CType(Me("dtb3"),String)
+            End Get
+            Set
+                Me("dtb3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb4() As String
+            Get
+                Return CType(Me("dtb4"),String)
+            End Get
+            Set
+                Me("dtb4") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb5() As String
+            Get
+                Return CType(Me("dtb5"),String)
+            End Get
+            Set
+                Me("dtb5") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb6() As String
+            Get
+                Return CType(Me("dtb6"),String)
+            End Get
+            Set
+                Me("dtb6") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb7() As String
+            Get
+                Return CType(Me("dtb7"),String)
+            End Get
+            Set
+                Me("dtb7") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dtb8() As String
+            Get
+                Return CType(Me("dtb8"),String)
+            End Get
+            Set
+                Me("dtb8") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

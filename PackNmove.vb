@@ -107,5 +107,24 @@ Public Class Ocean
     End Sub
 
 
+
+    Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+        My.Settings.dtb1 = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
+        My.Settings.dtb2 = DataGridView1.SelectedRows(0).Cells(1).Value.ToString
+        My.Settings.dtb3 = DataGridView1.SelectedRows(0).Cells(2).Value.ToString
+        My.Settings.dtb4 = DataGridView1.SelectedRows(0).Cells(3).Value.ToString
+        My.Settings.dtb5 = DataGridView1.SelectedRows(0).Cells(4).Value.ToString
+        My.Settings.dtb6 = DataGridView1.SelectedRows(0).Cells(5).Value.ToString
+        My.Settings.dtb7 = DataGridView1.SelectedRows(0).Cells(6).Value.ToString
+        ' My.Settings.dtb8 = DataGridView1.SelectedRows(0).Cells(7).Value
+
+
+
+
+
+        detailsform.Show()
+        ' detailsform.dtb1.Text = ""
+    End Sub
+
 End Class
 
