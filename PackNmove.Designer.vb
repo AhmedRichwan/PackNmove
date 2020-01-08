@@ -23,9 +23,9 @@ Partial Class Ocean
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ocean))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnPickFile = New System.Windows.Forms.Button()
@@ -42,9 +42,27 @@ Partial Class Ocean
         Me.Authorization = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.dtb1 = New System.Windows.Forms.TextBox()
+        Me.dtb7 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.dtb6 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.dtb5 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.dtb4 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.dtb3 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.dtb2 = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -54,9 +72,9 @@ Partial Class Ocean
         Me.Label3.ForeColor = System.Drawing.Color.Lavender
         Me.Label3.Location = New System.Drawing.Point(9, 128)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(190, 16)
+        Me.Label3.Size = New System.Drawing.Size(117, 16)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Room case finder v 1.0 Beta"
+        Me.Label3.Text = "Rcase v 1.0 Beta"
         '
         'PictureBox1
         '
@@ -73,15 +91,13 @@ Partial Class Ocean
         'btnPickFile
         '
         Me.btnPickFile.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
-        Me.btnPickFile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPickFile.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnPickFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnPickFile.BackColor = System.Drawing.Color.DarkCyan
         Me.btnPickFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnPickFile.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPickFile.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnPickFile.Location = New System.Drawing.Point(301, 12)
+        Me.btnPickFile.Location = New System.Drawing.Point(399, 12)
         Me.btnPickFile.Name = "btnPickFile"
         Me.btnPickFile.Size = New System.Drawing.Size(131, 33)
         Me.btnPickFile.TabIndex = 12
@@ -90,9 +106,10 @@ Partial Class Ocean
         '
         'tfilepath
         '
+        Me.tfilepath.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.tfilepath.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tfilepath.ForeColor = System.Drawing.Color.Navy
-        Me.tfilepath.Location = New System.Drawing.Point(171, 51)
+        Me.tfilepath.Location = New System.Drawing.Point(264, 51)
         Me.tfilepath.Multiline = True
         Me.tfilepath.Name = "tfilepath"
         Me.tfilepath.ReadOnly = True
@@ -101,37 +118,37 @@ Partial Class Ocean
         '
         'PictureBox2
         '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(794, 412)
+        Me.PictureBox2.Location = New System.Drawing.Point(753, 428)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(78, 37)
+        Me.PictureBox2.Size = New System.Drawing.Size(119, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 28
         Me.PictureBox2.TabStop = False
         '
         'findtxt
         '
+        Me.findtxt.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.findtxt.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.findtxt.ForeColor = System.Drawing.Color.Navy
-        Me.findtxt.Location = New System.Drawing.Point(397, 128)
+        Me.findtxt.Location = New System.Drawing.Point(428, 118)
         Me.findtxt.Name = "findtxt"
-        Me.findtxt.Size = New System.Drawing.Size(103, 26)
+        Me.findtxt.Size = New System.Drawing.Size(238, 26)
         Me.findtxt.TabIndex = 30
         Me.findtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnfindcase
         '
         Me.btnfindcase.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
-        Me.btnfindcase.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnfindcase.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnfindcase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnfindcase.BackColor = System.Drawing.Color.DarkCyan
         Me.btnfindcase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnfindcase.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnfindcase.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnfindcase.Location = New System.Drawing.Point(223, 121)
+        Me.btnfindcase.Location = New System.Drawing.Point(264, 115)
         Me.btnfindcase.Name = "btnfindcase"
         Me.btnfindcase.Size = New System.Drawing.Size(158, 33)
         Me.btnfindcase.TabIndex = 29
@@ -142,44 +159,46 @@ Partial Class Ocean
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RoomN, Me.TenantName, Me.CivilID, Me.MoveinDate, Me.DueDate, Me.Authorization, Me.Status})
         Me.DataGridView1.GridColor = System.Drawing.Color.LightSeaGreen
         Me.DataGridView1.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 189)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 156)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkSlateGray
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 60
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(860, 174)
+        Me.DataGridView1.Size = New System.Drawing.Size(854, 266)
         Me.DataGridView1.TabIndex = 31
         '
         'RoomN
@@ -242,24 +261,277 @@ Partial Class Ocean
         '
         'CheckBox1
         '
+        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(579, 51)
+        Me.CheckBox1.Location = New System.Drawing.Point(246, 89)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(265, 36)
+        Me.CheckBox1.Size = New System.Drawing.Size(458, 20)
         Me.CheckBox1.TabIndex = 32
-        Me.CheckBox1.Text = "Remember this file next time." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "افتح نفس هذا الملف في المرة القادمة."
+        Me.CheckBox1.Text = "Remember this file next time. افتح نفس هذا الملف في المرة القادمة."
         Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.dtb1)
+        Me.GroupBox1.Controls.Add(Me.dtb7)
+        Me.GroupBox1.Controls.Add(Me.Button5)
+        Me.GroupBox1.Controls.Add(Me.dtb6)
+        Me.GroupBox1.Controls.Add(Me.Button6)
+        Me.GroupBox1.Controls.Add(Me.dtb5)
+        Me.GroupBox1.Controls.Add(Me.Button7)
+        Me.GroupBox1.Controls.Add(Me.dtb4)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.dtb3)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.dtb2)
+        Me.GroupBox1.Controls.Add(Me.Button8)
+        Me.GroupBox1.Controls.Add(Me.Button9)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 154)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupBox1.Size = New System.Drawing.Size(860, 271)
+        Me.GroupBox1.TabIndex = 33
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Details / تفاصيل"
+        Me.GroupBox1.Visible = False
+        '
+        'Button4
+        '
+        Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button4.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button4.Location = New System.Drawing.Point(22, 215)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(148, 32)
+        Me.Button4.TabIndex = 65
+        Me.Button4.Text = "Back/رجوع"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button3.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button3.Location = New System.Drawing.Point(651, 215)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(188, 32)
+        Me.Button3.TabIndex = 64
+        Me.Button3.Text = "اضف الى سجل الزيارات." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Add to visits log."
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'dtb1
+        '
+        Me.dtb1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb1.ForeColor = System.Drawing.Color.Navy
+        Me.dtb1.Location = New System.Drawing.Point(277, 12)
+        Me.dtb1.Name = "dtb1"
+        Me.dtb1.Size = New System.Drawing.Size(122, 26)
+        Me.dtb1.TabIndex = 63
+        Me.dtb1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'dtb7
+        '
+        Me.dtb7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb7.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb7.ForeColor = System.Drawing.Color.Navy
+        Me.dtb7.Location = New System.Drawing.Point(605, 160)
+        Me.dtb7.Name = "dtb7"
+        Me.dtb7.Size = New System.Drawing.Size(151, 26)
+        Me.dtb7.TabIndex = 62
+        Me.dtb7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button5
+        '
+        Me.Button5.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button5.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button5.Location = New System.Drawing.Point(405, 159)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(194, 32)
+        Me.Button5.TabIndex = 61
+        Me.Button5.Text = "Status"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'dtb6
+        '
+        Me.dtb6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb6.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb6.ForeColor = System.Drawing.Color.Navy
+        Me.dtb6.Location = New System.Drawing.Point(231, 84)
+        Me.dtb6.Name = "dtb6"
+        Me.dtb6.Size = New System.Drawing.Size(525, 26)
+        Me.dtb6.TabIndex = 60
+        Me.dtb6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button6
+        '
+        Me.Button6.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button6.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button6.Location = New System.Drawing.Point(31, 80)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(194, 32)
+        Me.Button6.TabIndex = 59
+        Me.Button6.Text = "Authorization"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'dtb5
+        '
+        Me.dtb5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb5.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb5.ForeColor = System.Drawing.Color.Navy
+        Me.dtb5.Location = New System.Drawing.Point(605, 117)
+        Me.dtb5.Name = "dtb5"
+        Me.dtb5.Size = New System.Drawing.Size(151, 26)
+        Me.dtb5.TabIndex = 58
+        Me.dtb5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button7
+        '
+        Me.Button7.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button7.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button7.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button7.Location = New System.Drawing.Point(405, 117)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(194, 32)
+        Me.Button7.TabIndex = 57
+        Me.Button7.Text = "DueDate"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'dtb4
+        '
+        Me.dtb4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb4.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb4.ForeColor = System.Drawing.Color.Navy
+        Me.dtb4.Location = New System.Drawing.Point(231, 121)
+        Me.dtb4.Name = "dtb4"
+        Me.dtb4.Size = New System.Drawing.Size(168, 26)
+        Me.dtb4.TabIndex = 56
+        Me.dtb4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button2
+        '
+        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button2.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button2.Location = New System.Drawing.Point(31, 119)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(194, 32)
+        Me.Button2.TabIndex = 55
+        Me.Button2.Text = "MoveinDate"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'dtb3
+        '
+        Me.dtb3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb3.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb3.ForeColor = System.Drawing.Color.Navy
+        Me.dtb3.Location = New System.Drawing.Point(231, 161)
+        Me.dtb3.Name = "dtb3"
+        Me.dtb3.Size = New System.Drawing.Size(168, 26)
+        Me.dtb3.TabIndex = 54
+        Me.dtb3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button1
+        '
+        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button1.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button1.Location = New System.Drawing.Point(31, 158)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(194, 32)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = "CivilID"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'dtb2
+        '
+        Me.dtb2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dtb2.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtb2.ForeColor = System.Drawing.Color.Navy
+        Me.dtb2.Location = New System.Drawing.Point(231, 44)
+        Me.dtb2.Name = "dtb2"
+        Me.dtb2.Size = New System.Drawing.Size(525, 26)
+        Me.dtb2.TabIndex = 52
+        Me.dtb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button8
+        '
+        Me.Button8.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button8.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button8.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button8.Location = New System.Drawing.Point(31, 43)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(194, 32)
+        Me.Button8.TabIndex = 51
+        Me.Button8.Text = "TenantName"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button9.BackColor = System.Drawing.Color.DarkCyan
+        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button9.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button9.Location = New System.Drawing.Point(405, 9)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(188, 32)
+        Me.Button9.TabIndex = 50
+        Me.Button9.Text = "Case details /تفاصيل خزينة"
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'Ocean
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(884, 461)
+        Me.ClientSize = New System.Drawing.Size(884, 472)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.findtxt)
@@ -272,34 +544,53 @@ Partial Class Ocean
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(900, 500)
         Me.MinimumSize = New System.Drawing.Size(900, 500)
         Me.Name = "Ocean"
         Me.Opacity = 0.95R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PackNmove"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnPickFile As Button
-    Friend WithEvents tfilepath As TextBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents findtxt As TextBox
-    Friend WithEvents btnfindcase As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents RoomN As DataGridViewTextBoxColumn
-    Friend WithEvents TenantName As DataGridViewTextBoxColumn
-    Friend WithEvents CivilID As DataGridViewTextBoxColumn
-    Friend WithEvents MoveinDate As DataGridViewTextBoxColumn
-    Friend WithEvents DueDate As DataGridViewTextBoxColumn
-    Friend WithEvents Authorization As DataGridViewTextBoxColumn
-    Friend WithEvents Status As DataGridViewTextBoxColumn
-    Friend WithEvents CheckBox1 As CheckBox
+
+    Protected WithEvents Label3 As Label
+    Protected WithEvents PictureBox1 As PictureBox
+    Protected WithEvents btnPickFile As Button
+    Protected WithEvents tfilepath As TextBox
+    Protected WithEvents PictureBox2 As PictureBox
+    Protected WithEvents findtxt As TextBox
+    Protected WithEvents btnfindcase As Button
+    Protected WithEvents DataGridView1 As DataGridView
+    Protected WithEvents RoomN As DataGridViewTextBoxColumn
+    Protected WithEvents TenantName As DataGridViewTextBoxColumn
+    Protected WithEvents CivilID As DataGridViewTextBoxColumn
+    Protected WithEvents MoveinDate As DataGridViewTextBoxColumn
+    Protected WithEvents DueDate As DataGridViewTextBoxColumn
+    Protected WithEvents Authorization As DataGridViewTextBoxColumn
+    Protected WithEvents Status As DataGridViewTextBoxColumn
+    Protected WithEvents CheckBox1 As CheckBox
+    Protected WithEvents GroupBox1 As GroupBox
+    Protected WithEvents Button4 As Button
+    Protected WithEvents Button3 As Button
+    Protected WithEvents dtb1 As TextBox
+    Protected WithEvents dtb7 As TextBox
+    Protected WithEvents Button5 As Button
+    Protected WithEvents dtb6 As TextBox
+    Protected WithEvents Button6 As Button
+    Protected WithEvents dtb5 As TextBox
+    Protected WithEvents Button7 As Button
+    Protected WithEvents dtb4 As TextBox
+    Protected WithEvents Button2 As Button
+    Protected WithEvents dtb3 As TextBox
+    Protected WithEvents Button1 As Button
+    Protected WithEvents dtb2 As TextBox
+    Protected WithEvents Button8 As Button
+    Protected WithEvents Button9 As Button
 End Class

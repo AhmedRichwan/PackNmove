@@ -22,9 +22,30 @@ PackNmove
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:PackNmove.My.Resources.Resources.DailyLog">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
 <member name="P:PackNmove.My.Resources.Resources.mypath">
 <summary>
   Looks up a localized string similar to AhmedRashwan.
+</summary>
+</member>
+<member name="T:PackNmove.My.Resources.Resource1">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:PackNmove.My.Resources.Resource1.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:PackNmove.My.Resources.Resource1.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
 </members>

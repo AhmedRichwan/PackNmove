@@ -21,7 +21,8 @@ Public Class detailsform
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        '  My.Resources.daily
+
+
 
         Dim xlsApp As Excel.Application
         Dim xlsWB As Excel.Workbook
@@ -31,10 +32,12 @@ Public Class detailsform
 
         xlsApp = New Excel.Application
         xlsApp.Visible = False
-        xlsWB = xlsApp.Workbooks.Open("D:\89.xlsx")
+        Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+
+        xlsWB = xlsApp.Workbooks.Open("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx")
         xlsSheet = xlsWB.Worksheets(1)
-        xlsCell = xlsSheet.Range("A1")
-        xlsCell.Value = "testappending"
+        ' xlsCell = xlsSheet.Range("A1")
+        ' xlsCell.Value = "testappending"
         Dim rowcount = xlsSheet.UsedRange.Rows.Count
         'xlsSheet.Rows(rowcount + 1).Insert()
         xlsSheet.Cells(rowcount + 1, 1).Value = dtb1.Text

@@ -14,3 +14,4 @@ D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.detailsform.resources
 D:\VisualStudio\repos\PackNmove\bin\Debug\Interop.TaskScheduler.dll
 D:\VisualStudio\repos\PackNmove\obj\Debug\Interop.TaskScheduler.dll
 D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmoveProject.vbproj.ResolveComReference.cache
+D:\VisualStudio\repos\PackNmove\obj\Debug\PackNmove.Resource1.resources

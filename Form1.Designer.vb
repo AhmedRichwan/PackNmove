@@ -52,7 +52,7 @@ Partial Class detailsform
         Me.btnPickFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnPickFile.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPickFile.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnPickFile.Location = New System.Drawing.Point(386, 12)
+        Me.btnPickFile.Location = New System.Drawing.Point(386, 37)
         Me.btnPickFile.Name = "btnPickFile"
         Me.btnPickFile.Size = New System.Drawing.Size(188, 38)
         Me.btnPickFile.TabIndex = 13
@@ -231,7 +231,7 @@ Partial Class detailsform
         '
         Me.dtb1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtb1.ForeColor = System.Drawing.Color.Navy
-        Me.dtb1.Location = New System.Drawing.Point(258, 18)
+        Me.dtb1.Location = New System.Drawing.Point(258, 43)
         Me.dtb1.Name = "dtb1"
         Me.dtb1.Size = New System.Drawing.Size(122, 26)
         Me.dtb1.TabIndex = 47

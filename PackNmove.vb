@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.ServiceProcess
+Imports Excel = Microsoft.Office.Interop.Excel
+Imports Office = Microsoft.Office.Core
 
 
 
@@ -35,6 +37,8 @@ Public Class Ocean
 
     Private Sub btnfindcase_Click(sender As Object, e As EventArgs) Handles btnfindcase.Click
         If tfilepath.Text = "" Then Exit Sub
+        GroupBox1.Visible = False
+        DataGridView1.Visible = True
 
         Dim MyConnection As System.Data.OleDb.OleDbConnection
         Dim DtSet As System.Data.DataSet
@@ -42,19 +46,25 @@ Public Class Ocean
         'Fill the [Excel file fullpath] with specific value
         Dim searchtxt = findtxt.Text
         'copy to temp
-        Dim fileName As String = tfilepath.Text
-
-        Dim fi As New IO.FileInfo(fileName)
-
         Dim destinationFile As String = "C:\Temp\temp.xlsx"
 
         Try
             System.IO.Directory.CreateDirectory("C:\temp")
+            System.IO.Directory.CreateDirectory("C:\temp\DailyLog")
+            Dim fileName As String = tfilepath.Text
+            Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+            Dim fi As New IO.FileInfo(fileName)
+            System.IO.File.WriteAllBytes("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx", My.Resources.DailyLog)
+            Dim DilyLog As New IO.FileInfo("C:\Temp\DailyLog.xlsx")
+
+
+
             fi.CopyTo(destinationFile, True)
 
-        Catch iox As IOException
 
-            Console.WriteLine(iox.Message)
+        Catch ex As IOException
+
+            MsgBox(ex.Message)
 
         End Try
 
@@ -109,22 +119,74 @@ Public Class Ocean
 
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-        My.Settings.dtb1 = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
-        My.Settings.dtb2 = DataGridView1.SelectedRows(0).Cells(1).Value.ToString
-        My.Settings.dtb3 = DataGridView1.SelectedRows(0).Cells(2).Value.ToString
-        My.Settings.dtb4 = DataGridView1.SelectedRows(0).Cells(3).Value.ToString
-        My.Settings.dtb5 = DataGridView1.SelectedRows(0).Cells(4).Value.ToString
-        My.Settings.dtb6 = DataGridView1.SelectedRows(0).Cells(5).Value.ToString
-        My.Settings.dtb7 = DataGridView1.SelectedRows(0).Cells(6).Value.ToString
+        dtb1.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
+        dtb2.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString
+        dtb3.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString
+        dtb4.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString
+        dtb5.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString
+        dtb6.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString
+        dtb7.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString
         ' My.Settings.dtb8 = DataGridView1.SelectedRows(0).Cells(7).Value
+        DataGridView1.Visible = False
+        GroupBox1.Visible = True
 
 
 
 
 
-        detailsform.Show()
+
+        ' detailsform.Show()
         ' detailsform.dtb1.Text = ""
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        GroupBox1.Visible = False
+        DataGridView1.Visible = True
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+
+
+        Dim xlsApp As Excel.Application
+        Dim xlsWB As Excel.Workbook
+        Dim xlsSheet As Excel.Worksheet
+        Dim xlsCell As Excel.Range
+        Dim xlsDatei As String
+
+        xlsApp = New Excel.Application
+        xlsApp.Visible = False
+        Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+
+        xlsWB = xlsApp.Workbooks.Open("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx")
+        xlsSheet = xlsWB.Worksheets(1)
+        ' xlsCell = xlsSheet.Range("A1")
+        ' xlsCell.Value = "testappending"
+        Dim rowcount = xlsSheet.Range("B3").Value + 4
+        'xlsSheet.Rows(rowcount + 1).Insert()
+        xlsSheet.Cells(rowcount + 1, 1).Value = dtb1.Text
+        xlsSheet.Cells(rowcount + 1, 2).Value = dtb2.Text
+        xlsSheet.Cells(rowcount + 1, 3).Value = dtb3.Text
+        xlsSheet.Cells(rowcount + 1, 4).Value = dtb4.Text
+        xlsSheet.Cells(rowcount + 1, 5).Value = dtb5.Text
+        xlsSheet.Cells(rowcount + 1, 6).Value = dtb6.Text
+        xlsSheet.Cells(rowcount + 1, 7).Value = dtb7.Text
+        xlsSheet.Cells(rowcount + 1, 9).Value = Date.Now().ToString("dd/MM/yyyy  HH:mm.ss")
+
+        MsgBox("تم اضافة الزيارة الى سجل الزيارات اليوم")
+        ' xlsSheet.Rows().Insert("Ahmed", "Ali")
+
+        xlsWB.Save()
+        xlsWB.Close()
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(xlsApp)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            xlsApp = Nothing
+        End Try
+
+    End Sub
 End Class
 
