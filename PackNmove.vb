@@ -1,15 +1,17 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Printing
 Imports System.IO
 Imports System.ServiceProcess
+Imports Microsoft.Office.Interop.Excel
 Imports Excel = Microsoft.Office.Interop.Excel
 Imports Office = Microsoft.Office.Core
 
 
 
 Public Class Ocean
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
+    Public todaydate As String = Date.Now().ToString("ddMMMyyyy")
 
-    End Sub
+
     Private Sub Packnmove_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         tfilepath.Text = My.Settings.rempath
 
@@ -19,10 +21,10 @@ Public Class Ocean
 
             Dim fi As New IO.FileInfo(fileName)
 
-            Dim destinationFile As String = "C:\Temp\temp.xlsx"
+            Dim destinationFile As String = "C:\PackNmove\PackNmove.xlsx"
 
             Try
-                System.IO.Directory.CreateDirectory("C:\temp")
+                System.IO.Directory.CreateDirectory("C:\PackNmove")
                 fi.CopyTo(destinationFile, True)
 
             Catch iox As IOException
@@ -45,17 +47,17 @@ Public Class Ocean
         Dim MyCommand As System.Data.OleDb.OleDbDataAdapter
         'Fill the [Excel file fullpath] with specific value
         Dim searchtxt = findtxt.Text
-        'copy to temp
-        Dim destinationFile As String = "C:\Temp\temp.xlsx"
+        'copy to PackNmove
+        Dim destinationFile As String = "C:\PackNmove\PackNmove.xlsx"
 
         Try
-            System.IO.Directory.CreateDirectory("C:\temp")
-            System.IO.Directory.CreateDirectory("C:\temp\DailyLog")
+            System.IO.Directory.CreateDirectory("C:\PackNmove")
+            System.IO.Directory.CreateDirectory("C:\PackNmove\DailyLog")
             Dim fileName As String = tfilepath.Text
-            Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+            '  Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
             Dim fi As New IO.FileInfo(fileName)
-            System.IO.File.WriteAllBytes("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx", My.Resources.DailyLog)
-            Dim DilyLog As New IO.FileInfo("C:\Temp\DailyLog.xlsx")
+            'If Not File.Exists("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx") Then System.IO.File.WriteAllBytes("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx", My.Resources.DailyLog)
+            Dim DilyLog As New IO.FileInfo("C:\PackNmove\DailyLog.xlsx")
 
 
 
@@ -140,45 +142,77 @@ Public Class Ocean
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
+        tbvisitnote.Text = ""
         GroupBox1.Visible = False
         DataGridView1.Visible = True
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-
-
+        Dim mymsgbox As DialogResult = MsgBox("هل تريد اضافة زيارة لهذه الغرفة الى سجل زيارات اليوم ", 1, "تأكيد الاضافة")
+        If mymsgbox = DialogResult.Cancel Then Exit Sub
+        Ladding.Visible = True
+        Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
         Dim xlsApp As Excel.Application
         Dim xlsWB As Excel.Workbook
         Dim xlsSheet As Excel.Worksheet
         Dim xlsCell As Excel.Range
         Dim xlsDatei As String
+        xlsApp = New Excel.Application
+        xlsApp.Visible = False
+        ' Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+
+        'xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
+        'xlsSheet = xlsWB.Worksheets(1)
+        Try
+            If Not File.Exists("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx") Then
+                System.IO.File.WriteAllBytes("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx", My.Resources.DailyLog)
+
+                xlsApp = New Excel.Application
+                xlsApp.Visible = False
+                xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
+                xlsSheet = xlsWB.Worksheets(1)
+
+                xlsSheet.Range("D2").Value = xlsSheet.Range("D2").Value & Date.Now().ToString("dd/MM/yyyy")
+                xlsWB.Save()
+                xlsWB.Close()
+
+            End If
+
+
+
+        Catch ex As Exception
+
+        End Try
+
 
         xlsApp = New Excel.Application
         xlsApp.Visible = False
-        Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
 
-        xlsWB = xlsApp.Workbooks.Open("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx")
+
+
+
+
+        xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
         xlsSheet = xlsWB.Worksheets(1)
-        ' xlsCell = xlsSheet.Range("A1")
-        ' xlsCell.Value = "testappending"
-        Dim rowcount = xlsSheet.Range("B3").Value + 4
-        'xlsSheet.Rows(rowcount + 1).Insert()
-        xlsSheet.Cells(rowcount + 1, 1).Value = dtb1.Text
-        xlsSheet.Cells(rowcount + 1, 2).Value = dtb2.Text
-        xlsSheet.Cells(rowcount + 1, 3).Value = dtb3.Text
-        xlsSheet.Cells(rowcount + 1, 4).Value = dtb4.Text
-        xlsSheet.Cells(rowcount + 1, 5).Value = dtb5.Text
-        xlsSheet.Cells(rowcount + 1, 6).Value = dtb6.Text
-        xlsSheet.Cells(rowcount + 1, 7).Value = dtb7.Text
-        xlsSheet.Cells(rowcount + 1, 9).Value = Date.Now().ToString("dd/MM/yyyy  HH:mm.ss")
 
-        MsgBox("تم اضافة الزيارة الى سجل الزيارات اليوم")
+        Dim rowcount = xlsSheet.Range("C3").Value + 4
+        xlsSheet.Cells(rowcount + 1, 1).Value = rowcount - 3
+        xlsSheet.Cells(rowcount + 1, 2).Value = dtb1.Text
+        xlsSheet.Cells(rowcount + 1, 3).Value = dtb2.Text
+        xlsSheet.Cells(rowcount + 1, 4).Value = dtb3.Text
+        xlsSheet.Cells(rowcount + 1, 5).Value = dtb4.Text
+        xlsSheet.Cells(rowcount + 1, 6).Value = dtb5.Text
+        xlsSheet.Cells(rowcount + 1, 7).Value = dtb6.Text
+        xlsSheet.Cells(rowcount + 1, 8).Value = dtb7.Text
+        xlsSheet.Cells(rowcount + 1, 9).Value = tbvisitnote.Text.ToString
+        xlsSheet.Cells(rowcount + 1, 10).Value = Date.Now().ToString
+        Ladding.Visible = False
+        MsgBox("تم اضافة الزيارة الى سجل الزيارات اليوم", 0, "تم")
         ' xlsSheet.Rows().Insert("Ahmed", "Ali")
 
         xlsWB.Save()
         xlsWB.Close()
+
         Try
             System.Runtime.InteropServices.Marshal.ReleaseComObject(xlsApp)
         Catch ex As Exception
@@ -186,6 +220,44 @@ Public Class Ocean
         Finally
             xlsApp = Nothing
         End Try
+
+    End Sub
+
+    Private Sub dtb7_TextChanged(sender As Object, e As EventArgs) Handles dtb7.TextChanged
+
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox2.Checked = True Then tbvisitnote.ReadOnly = False Else tbvisitnote.ReadOnly = True
+    End Sub
+
+    Private Sub PrintLog_Click(sender As Object, e As EventArgs) Handles PrintLog.Click
+        If Not File.Exists("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx") Then
+            MsgBox("لا يوجد سجل زيارات بتاريخ اليوم ")
+            Exit Sub
+        End If
+        Try
+            System.IO.File.Copy("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx", "C:\PackNmove\DailyLog\DailyLog_print.xlsx")
+
+        Catch ex As Exception
+
+        End Try
+        Try
+            Dim PrintLog As New ProcessStartInfo
+            PrintLog.UseShellExecute = True
+            PrintLog.Verb = "print"
+
+            PrintLog.WindowStyle = ProcessWindowStyle.Hidden
+            PrintLog.FileName = "C:\PackNmove\DailyLog\DailyLog_print.xlsx"
+            Process.Start(PrintLog)
+        Catch ex As Exception
+            MsgBox("حدث خطأ اثناء الطباعة")
+        End Try
+
+
+        'System.IO.File.Delete("C:\PackNmove\DailyLog\DailyLog_" & todaydate & "_print.xlsx")
+
+
 
     End Sub
 End Class

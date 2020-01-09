@@ -1,6 +1,8 @@
 ﻿Imports Excel = Microsoft.Office.Interop.Excel
 Imports Office = Microsoft.Office.Core
 Public Class detailsform
+    Public todaydate As String = Date.Now().ToString("ddMMMyyyy")
+
     Private Sub findtxt_TextChanged(sender As Object, e As EventArgs) Handles dtb2.TextChanged
 
     End Sub
@@ -34,7 +36,7 @@ Public Class detailsform
         xlsApp.Visible = False
         Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
 
-        xlsWB = xlsApp.Workbooks.Open("C:\Temp\DailyLog\DailyLog_" & todaydate & ".xlsx")
+        xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
         xlsSheet = xlsWB.Worksheets(1)
         ' xlsCell = xlsSheet.Range("A1")
         ' xlsCell.Value = "testappending"

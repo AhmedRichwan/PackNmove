@@ -39,8 +39,8 @@ Namespace My.Resources
         Public ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("PackNmove.Resources", GetType(Resources).Assembly)
-                    resourceMan = temp
+                    Dim PackNmove As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("PackNmove.Resources", GetType(Resources).Assembly)
+                    resourceMan = PackNmove
                 End If
                 Return resourceMan
             End Get
