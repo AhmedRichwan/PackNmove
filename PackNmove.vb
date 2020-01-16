@@ -148,7 +148,7 @@ Public Class Ocean
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim mymsgbox As DialogResult = MsgBox("هل تريد اضافة زيارة لهذه الغرفة الى سجل زيارات اليوم ", 1, "تأكيد الاضافة")
+        Dim mymsgbox As DialogResult = MsgBox("هل تريد تسجيل دخول زيارة لهذه الغرفة الى سجل زيارات اليوم ", 1, "تأكيد الاضافة")
         If mymsgbox = DialogResult.Cancel Then Exit Sub
         Ladding.Visible = True
         Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
@@ -206,8 +206,10 @@ Public Class Ocean
         xlsSheet.Cells(rowcount + 1, 8).Value = dtb7.Text
         xlsSheet.Cells(rowcount + 1, 9).Value = tbvisitnote.Text.ToString
         xlsSheet.Cells(rowcount + 1, 10).Value = Date.Now().ToString
+        xlsSheet.Cells(rowcount + 1, 11).Value = "دخول"
+
         Ladding.Visible = False
-        MsgBox("تم اضافة الزيارة الى سجل الزيارات اليوم", 0, "تم")
+        MsgBox("تم تسجيل دخول الزيارة الى سجل الزيارات اليوم", 0, "تم")
         ' xlsSheet.Rows().Insert("Ahmed", "Ali")
 
         xlsWB.Save()
@@ -258,6 +260,84 @@ Public Class Ocean
         'System.IO.File.Delete("C:\PackNmove\DailyLog\DailyLog_" & todaydate & "_print.xlsx")
 
 
+
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+
+        Dim mymsgbox As DialogResult = MsgBox("هل تريد تسجيل خروج زيارة لهذه الغرفة؟  ", 1, "تأكيد الاضافة")
+        If mymsgbox = DialogResult.Cancel Then Exit Sub
+        Ladding.Visible = True
+        Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+        Dim xlsApp As Excel.Application
+        Dim xlsWB As Excel.Workbook
+        Dim xlsSheet As Excel.Worksheet
+        Dim xlsCell As Excel.Range
+        Dim xlsDatei As String
+        xlsApp = New Excel.Application
+        xlsApp.Visible = False
+        ' Dim todaydate As String = Date.Now().ToString("ddMMMyyyy")
+
+        'xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
+        'xlsSheet = xlsWB.Worksheets(1)
+        Try
+            If Not File.Exists("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx") Then
+                System.IO.File.WriteAllBytes("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx", My.Resources.DailyLog)
+
+                xlsApp = New Excel.Application
+                xlsApp.Visible = False
+                xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
+                xlsSheet = xlsWB.Worksheets(1)
+
+                xlsSheet.Range("D2").Value = xlsSheet.Range("D2").Value & Date.Now().ToString("dd/MM/yyyy")
+                xlsWB.Save()
+                xlsWB.Close()
+
+            End If
+
+
+
+        Catch ex As Exception
+
+        End Try
+
+
+        xlsApp = New Excel.Application
+        xlsApp.Visible = False
+
+
+
+
+
+        xlsWB = xlsApp.Workbooks.Open("C:\PackNmove\DailyLog\DailyLog_" & todaydate & ".xlsx")
+        xlsSheet = xlsWB.Worksheets(1)
+
+        Dim rowcount = xlsSheet.Range("C3").Value + 4
+        xlsSheet.Cells(rowcount + 1, 1).Value = rowcount - 3
+        xlsSheet.Cells(rowcount + 1, 2).Value = dtb1.Text
+        xlsSheet.Cells(rowcount + 1, 3).Value = dtb2.Text
+        xlsSheet.Cells(rowcount + 1, 4).Value = dtb3.Text
+        xlsSheet.Cells(rowcount + 1, 5).Value = dtb4.Text
+        xlsSheet.Cells(rowcount + 1, 6).Value = dtb5.Text
+        xlsSheet.Cells(rowcount + 1, 7).Value = dtb6.Text
+        xlsSheet.Cells(rowcount + 1, 8).Value = dtb7.Text
+        xlsSheet.Cells(rowcount + 1, 9).Value = tbvisitnote.Text.ToString
+        xlsSheet.Cells(rowcount + 1, 10).Value = Date.Now().ToString
+        xlsSheet.Cells(rowcount + 1, 11).Value = "خروج"
+        Ladding.Visible = False
+        MsgBox("تم تسجيل خروج الزيارة ", 0, "تم")
+        ' xlsSheet.Rows().Insert("Ahmed", "Ali")
+
+        xlsWB.Save()
+        xlsWB.Close()
+
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(xlsApp)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            xlsApp = Nothing
+        End Try
 
     End Sub
 End Class

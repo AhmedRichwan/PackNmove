@@ -23,9 +23,9 @@ Partial Class Ocean
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ocean))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnPickFile = New System.Windows.Forms.Button()
@@ -43,6 +43,10 @@ Partial Class Ocean
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Ladding = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.tbvisitnote = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.dtb1 = New System.Windows.Forms.TextBox()
@@ -59,9 +63,6 @@ Partial Class Ocean
         Me.dtb2 = New System.Windows.Forms.TextBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.tbvisitnote = New System.Windows.Forms.TextBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Ladding = New System.Windows.Forms.Label()
         Me.PrintLog = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,7 +79,7 @@ Partial Class Ocean
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 16)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Rcase v 1.2 Beta"
+        Me.Label3.Text = "Rcase v 1.3 Beta"
         '
         'PictureBox1
         '
@@ -168,14 +169,14 @@ Partial Class Ocean
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RoomN, Me.TenantName, Me.CivilID, Me.MoveinDate, Me.DueDate, Me.Authorization, Me.Status})
@@ -184,24 +185,24 @@ Partial Class Ocean
         Me.DataGridView1.Location = New System.Drawing.Point(12, 156)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkSlateGray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 60
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(854, 266)
         Me.DataGridView1.TabIndex = 31
@@ -283,6 +284,7 @@ Partial Class Ocean
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Button10)
         Me.GroupBox1.Controls.Add(Me.Ladding)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.tbvisitnote)
@@ -312,10 +314,70 @@ Partial Class Ocean
         Me.GroupBox1.Text = "Details / تفاصيل"
         Me.GroupBox1.Visible = False
         '
+        'Button10
+        '
+        Me.Button10.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button10.BackColor = System.Drawing.Color.OrangeRed
+        Me.Button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button10.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.ForeColor = System.Drawing.Color.Transparent
+        Me.Button10.Location = New System.Drawing.Point(340, 242)
+        Me.Button10.Name = "Button10"
+        Me.Button10.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button10.Size = New System.Drawing.Size(244, 27)
+        Me.Button10.TabIndex = 68
+        Me.Button10.TabStop = False
+        Me.Button10.Text = "تسجيل خروج زيارة / End visit time"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Ladding
+        '
+        Me.Ladding.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Ladding.AutoSize = True
+        Me.Ladding.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ladding.ForeColor = System.Drawing.Color.Yellow
+        Me.Ladding.Location = New System.Drawing.Point(160, 252)
+        Me.Ladding.Name = "Ladding"
+        Me.Ladding.Size = New System.Drawing.Size(172, 16)
+        Me.Ladding.TabIndex = 67
+        Me.Ladding.Text = "جاري التسجيل / Adding..."
+        Me.Ladding.Visible = False
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.ForeColor = System.Drawing.Color.White
+        Me.CheckBox2.Location = New System.Drawing.Point(530, 211)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(324, 20)
+        Me.CheckBox2.TabIndex = 34
+        Me.CheckBox2.Text = "اضافة ملاحظة الى سجل الزيارة/ Add Visit note"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'tbvisitnote
+        '
+        Me.tbvisitnote.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.tbvisitnote.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.tbvisitnote.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbvisitnote.ForeColor = System.Drawing.Color.Navy
+        Me.tbvisitnote.Location = New System.Drawing.Point(31, 201)
+        Me.tbvisitnote.Multiline = True
+        Me.tbvisitnote.Name = "tbvisitnote"
+        Me.tbvisitnote.ReadOnly = True
+        Me.tbvisitnote.Size = New System.Drawing.Size(493, 35)
+        Me.tbvisitnote.TabIndex = 66
+        Me.tbvisitnote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Button4
         '
         Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Button4.BackColor = System.Drawing.Color.DarkCyan
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -331,18 +393,18 @@ Partial Class Ocean
         'Button3
         '
         Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Button3.BackColor = System.Drawing.Color.DarkCyan
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Window
-        Me.Button3.Location = New System.Drawing.Point(556, 242)
+        Me.Button3.Location = New System.Drawing.Point(600, 242)
         Me.Button3.Name = "Button3"
         Me.Button3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button3.Size = New System.Drawing.Size(288, 27)
+        Me.Button3.Size = New System.Drawing.Size(244, 27)
         Me.Button3.TabIndex = 64
-        Me.Button3.Text = "اضف الى سجل الزيارات./Add to visits log."
+        Me.Button3.Text = "تسجيل دخول زيارة / Start visit time"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'dtb1
@@ -556,47 +618,6 @@ Partial Class Ocean
         Me.Button9.Text = "Case details /تفاصيل خزينة"
         Me.Button9.UseVisualStyleBackColor = False
         '
-        'tbvisitnote
-        '
-        Me.tbvisitnote.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.tbvisitnote.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.tbvisitnote.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbvisitnote.ForeColor = System.Drawing.Color.Navy
-        Me.tbvisitnote.Location = New System.Drawing.Point(31, 201)
-        Me.tbvisitnote.Multiline = True
-        Me.tbvisitnote.Name = "tbvisitnote"
-        Me.tbvisitnote.ReadOnly = True
-        Me.tbvisitnote.Size = New System.Drawing.Size(493, 35)
-        Me.tbvisitnote.TabIndex = 66
-        Me.tbvisitnote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Checked = True
-        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.ForeColor = System.Drawing.Color.White
-        Me.CheckBox2.Location = New System.Drawing.Point(530, 211)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(324, 20)
-        Me.CheckBox2.TabIndex = 34
-        Me.CheckBox2.Text = "اضافة ملاحظة الى سجل الزيارة/ Add Visit note"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Ladding
-        '
-        Me.Ladding.AutoSize = True
-        Me.Ladding.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ladding.ForeColor = System.Drawing.Color.Yellow
-        Me.Ladding.Location = New System.Drawing.Point(387, 250)
-        Me.Ladding.Name = "Ladding"
-        Me.Ladding.Size = New System.Drawing.Size(163, 16)
-        Me.Ladding.TabIndex = 67
-        Me.Ladding.Text = "جاري الاضافة / Adding..."
-        Me.Ladding.Visible = False
-        '
         'PrintLog
         '
         Me.PrintLog.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
@@ -686,4 +707,5 @@ Partial Class Ocean
     Protected WithEvents CheckBox2 As CheckBox
     Protected WithEvents Ladding As Label
     Protected WithEvents PrintLog As Button
+    Protected WithEvents Button10 As Button
 End Class
